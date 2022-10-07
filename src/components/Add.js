@@ -11,17 +11,17 @@ export const Add = () => {
     setQuery(e.target.value);
 
     
-    // fetch(
-    //   `http://localhost:3000`
-    // )
-    //   .then((res) => res.json())
-    //   .then((data) => {
-    //     if (!data.errors) {
-    //       setResults(data.results);
-    //     } else {
-    //       setResults([]);
-    //     }
-    //   });
+    fetch(
+      `http://localhost:3000`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        if (!data.errors) {
+          setResults(data.results);
+        } else {
+          setResults([]);
+        }
+      });
   };
 
   return (
