@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../context/GlobalState";
 import { MovieCard } from "./MovieCard";
 
-
+export const Watched = () => {
+  const { watched } = useContext(GlobalContext);
 
   return (
     <div className="movie-page">
