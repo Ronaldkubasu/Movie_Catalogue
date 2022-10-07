@@ -11,7 +11,24 @@ import { GlobalProvider } from "./context/GlobalState";
 
 function App() {
   return (
-    
+    <GlobalProvider>
+      <Router>
+        <Header />
+
+        <Switch>
+          <Route exact path="/">
+            <Watchlist />
+          </Route>
+          <Route path="/add">
+            <Add />
+          </Route>
+          <Route path="/watched">
+            <Watched />
+          </Route>
+        </Switch>
+      </Router>
+    </GlobalProvider>
+  );
 }
 
 export default App;
