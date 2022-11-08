@@ -13,7 +13,7 @@ export const Add = () => {
     
     
     fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1&include_adult=false&query=${e.target.value}`
+      `http://localhost:8000/reservations?api_key=${process.env.REACT_APP_TMDB_KEY}&language=en-US&page=1&include_adult=false&query=${e.target.value}`
     )
       .then((res) => res.json())
       .then((data) => {
@@ -52,3 +52,5 @@ export const Add = () => {
     </div>
   );
 };
+
+// https://api.themoviedb.org/3/search/movie
